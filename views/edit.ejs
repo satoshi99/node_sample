@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Run note | 編集</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="header-logo">Run note</a>
+    </header>
+    <div class="container">
+      <div class="container-header">
+        <h1>練習メニュー編集</h1>
+      </div>
+      <div class="item-form-wrapper">
+        <p class="form-label">練習内容</p>
+        <form action="/update/<%= item.id %>" method="post">
+          <input type="text" name="itemName" value="<%= item.name %>">
+          <input type="submit" value="更新する">
+        </form>
+      </div>
+      <a href="/index" class="cancel-button">Back</a>
+    </div>
+  </body>
+</html>
